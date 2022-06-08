@@ -1,0 +1,25 @@
+@use '../../styles/helpers' as *;
+
+.skill {
+  @include section-offsets;
+  @include transition-long;
+
+  &[data-loaded='false'] {
+    opacity: 0.05;
+  }
+
+  &__title {
+    @include section-title;
+  }
+
+  &__keywords {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+
+    &__item {
+      @include section-text;
+    }
+  }
+}

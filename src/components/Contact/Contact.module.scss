@@ -1,0 +1,33 @@
+@use '../../styles/helpers' as *;
+
+.list {
+  display: flex;
+  flex-direction: column;
+
+  @include screen {
+    gap: 2rem;
+
+    &__item {
+      grid-template-columns: 40px 1fr;
+      gap: 1rem;
+    }
+  }
+
+  @include print {
+    gap: 2rem;
+
+    &__item {
+      grid-template-columns: 28px 1fr;
+      gap: 1rem;
+    }
+  }
+
+  &__item {
+    display: grid;
+    align-items: center;
+  }
+}
+
+.button {
+  @include section-icon-button;
+}

@@ -1,0 +1,71 @@
+@use 'helpers' as *;
+
+.cv {
+  display: grid;
+  grid-template-columns: minmax(auto, 470px) minmax(480px, 700px);
+  justify-content: center;
+
+  @include screen {
+    background-color: #585c68;
+  }
+
+  @include print {
+    gap: 2pt;
+
+    * {
+      print-color-adjust: exact !important;
+      -webkit-print-color-adjust: exact !important;
+    }
+  }
+
+  &__left,
+  &__right {
+    display: grid;
+    gap: clamp(8px, 1vmax, 16px);
+    padding: clamp(24px, 3vmax, 48px);
+    @include transition-long;
+
+    &[data-loaded='false'] {
+      opacity: 0;
+    }
+  }
+
+  &__left {
+    padding: clamp(24px, 3vmax, 48px);
+
+    & > *:not([data-type='separator']) {
+      margin-bottom: 1rem;
+    }
+
+    @include screen {
+      background-color: var(--primary, #2699c4);
+      color: #d6f4ff;
+
+      &[data-loaded='false'] {
+        transform: translateX(-10%);
+      }
+
+      @include if-title {
+        color: #fff;
+      }
+    }
+
+    @include print {
+      background-color: #fff;
+      color: #0a0a0a;
+
+      @include if-title {
+        color: var(--primary, #2699c4);
+      }
+    }
+  }
+
+  &__right {
+    background-color: #fff;
+    color: #0a0a0a;
+
+    @include if-title {
+      color: var(--primary, #2699c4);
+    }
+  }
+}

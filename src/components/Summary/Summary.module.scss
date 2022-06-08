@@ -1,0 +1,23 @@
+@use '../../styles/helpers' as *;
+
+.container {
+  @include section-offsets;
+  grid-template-rows: 2.8rem;
+
+  &[data-loaded='false'] {
+    .text {
+      transform: translateY(25%);
+      opacity: 0.05;
+    }
+  }
+}
+
+.title {
+  @include section-title;
+}
+
+.text {
+  @include section-text;
+  @include transition-long;
+  max-width: 640px;
+}
