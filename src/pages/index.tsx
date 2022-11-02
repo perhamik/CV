@@ -11,6 +11,7 @@ import Work from '@/src/components/Work'
 import { useContext } from 'react'
 import PageContext from '../context/PageContext'
 import Head from 'next/head'
+import Portfolio from '../components/Portfolio'
 
 function Home() {
   const _contactInfo = {
@@ -36,6 +37,8 @@ function Home() {
         </div>
         <div data-index={0} className={layout.cv__right} data-loaded={!loading}>
           <Summary content={data.basics.summary} />
+          <Separator dark data-index={5} />
+          <Portfolio projects={data.publications} />
           <Separator dark data-index={5} />
           <Work work={data.work} education={data.education} />
         </div>

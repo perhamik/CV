@@ -3,7 +3,7 @@ import {
   createContext,
   Dispatch,
   SetStateAction,
-  useLayoutEffect,
+  useEffect,
   useState,
 } from 'react'
 
@@ -29,7 +29,7 @@ export const PageProvider = ({ children }) => {
     setSeparatorCount: setSeparatorCount,
   }
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setTimeout(() => {
       setLoading(false)
     }, 150)

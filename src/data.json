@@ -8,7 +8,7 @@
     },
     "email": "denys.yaroshenko.mail@gmail.com",
     "phone": "(066) 230-61-43",
-    "summary": "Meticulous web developer with about 1.5 years of experience in React (Next.js). Firm believer in the mobile-first approach (except alternative requirements). I usually like to watch different tutorials, as they contain trending features and represents a different point of view. Try to keep myself up to date with web scope innovations.",
+    "summary": "Meticulous web developer with about 2 years of experience in React (Next.js). Firm believer in the mobile-first approach (except alternative requirements). I usually like to watch different tutorials, as they contain trending features and represents a different point of view. Try to keep myself up to date with web scope innovations.",
     "location": {
       "city": "Kyiv",
       "country": "Ukraine"
@@ -31,7 +31,34 @@
       }
     ]
   },
+  "publications": [
+    {
+      "name": "RedFox",
+      "publisher": "Company",
+      "releaseDate": "2022-09-09",
+      "url": "http://redfoxaudit.co.uk/",
+      "summary": "A tiny social audit tool"
+    },
+    {
+      "name": "BBros",
+      "publisher": "Company",
+      "releaseDate": "2022-08-22",
+      "url": "https://bbros.io/",
+      "summary": "Simple landing page"
+    }
+  ],
   "work": [
+    {
+      "name": "Soft-Boost",
+      "location": "Kharkiv, Ukraine",
+      "description": "Full-Cycle Web Development Company",
+      "position": "Frontend Developer",
+      "url": "https://soft-boost.com/",
+      "startDate": "2022-06-20",
+      "endDate": "2022-10-07",
+      "summary": "",
+      "highlights": ["Involved in short-term web projects (Vue, Next)"]
+    },
     {
       "name": "Sevn Studio",
       "location": "Kyiv, Ukraine",
@@ -42,10 +69,9 @@
       "endDate": "2022-06-04",
       "summary": "",
       "highlights": [
-        "Implemented websites, mobile applications, and landing pages from concept through deployment (React/Next)",
+        "Implemented websites from concept through deployment (React/Next)",
         "Assessed UX and UI designs for technical feasibility",
-        "Maintenance assigned projects",
-        "Collaborated with team members to develop websites based on Wordpress (WooCommerce, ACF, Polylang)"
+        "Maintenance assigned projects"
       ]
     },
     {
@@ -60,9 +86,7 @@
       "highlights": [
         "Website maintenance",
         "Content administration",
-        "Analysis and implementation of functionality (GMS, similar to 1C)",
-        "Troubleshooting software and hardware issues",
-        "Developing design templates"
+        "Troubleshooting software and hardware issues"
       ]
     },
     {
@@ -74,11 +98,7 @@
       "startDate": "2018-11-05",
       "endDate": "2019-12-27",
       "summary": "",
-      "highlights": [
-        "Editing Wordpress templates",
-        "Website maintenance",
-        "Back up & version control"
-      ]
+      "highlights": ["Editing Wordpress templates", "Website maintenance"]
     }
   ],
   "education": [
@@ -90,10 +110,7 @@
       "startDate": "2015-09-01",
       "endDate": "2019-07-20",
       "score": "4.0",
-      "courses": [
-        "Cisco IT Essentials 5.0 - PC Hardware and Software",
-        "Cisco Linux Essentials - Command-line and Basic Open Source Concepts"
-      ]
+      "courses": ["Cisco IT Essentials 5.0, Cisco Linux Essentials"]
     }
   ],
   "skills": [

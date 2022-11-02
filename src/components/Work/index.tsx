@@ -1,6 +1,6 @@
 import Separator from '@/src/components/Separator'
 import PageContext from '@/src/context/PageContext'
-import { useContext, useMemo, useState } from 'react'
+import { useContext, useMemo } from 'react'
 import style from './Work.module.scss'
 
 interface WorkExperience {

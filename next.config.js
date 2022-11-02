@@ -1,25 +1,22 @@
-const withPlugins = require('next-compose-plugins')
-
-module.exports = withPlugins([], {
-  async headers() {
-    return [
+const headers = async () => [
+  {
+    // Apply these headers to all routes in your application.
+    source: '/:path*',
+    headers: [
       {
-        // Apply these headers to all routes in your application.
-        source: '/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value:
-              'Cache-Control: no-cache, no-store, max-age=0, must-revalidate',
-          },
-          {
-            key: 'Access-Control-Allow-Origin',
-            value: '*',
-          },
-        ],
+        key: 'Cache-Control',
+        value: 'Cache-Control: no-cache, no-store, max-age=0, must-revalidate',
       },
-    ]
+      {
+        key: 'Access-Control-Allow-Origin',
+        value: '*',
+      },
+    ],
   },
+]
+
+const nextConfig = {
+  headers: headers,
   devIndicators: {
     buildActivityPosition: 'bottom-right',
   },
@@ -41,4 +38,8 @@ module.exports = withPlugins([], {
     keepAlive: false,
   },
   trailingSlash: true,
-})
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH,
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH,
+}
+
+module.exports = nextConfig
