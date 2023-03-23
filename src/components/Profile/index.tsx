@@ -5,14 +5,23 @@ import profile from './Profile.module.scss'
 type ProfileProps = {
   person: string
   scope: string
+  avatar: boolean
 }
 
-export default function Profile({ person, scope }: ProfileProps) {
+const ProfilePhoto = ({ display }: { display: boolean }) => {
+  return display ? (
+    <figure className={profile.avatar}>
+      <Image src={photo} priority={true} alt="Profile photo" />
+    </figure>
+  ) : (
+    <></>
+  )
+}
+
+export default function Profile({ person, scope, avatar }: ProfileProps) {
   return (
     <div className={profile.container}>
-      <figure className={profile.avatar}>
-        <Image src={photo} priority={true} alt="Profile photo" />
-      </figure>
+      <ProfilePhoto display={avatar} />
       <div className={profile.text}>
         <h1 className={profile.title}>{person}</h1>
         <h2 className={profile.scope}>{scope}</h2>

@@ -2,7 +2,6 @@
 
 .container {
   @include section-offsets;
-  grid-template-rows: 2.8rem;
 
   &[data-loaded='false'] {
     .text {

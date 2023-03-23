@@ -6,8 +6,19 @@
   justify-content: center;
 
   @include screen {
+    min-height: calc(var(--vh, 1vh) * 100);
     background-color: #585c68;
   }
+
+  // @media only print {
+  //   height: 310mm;
+
+  //   &__left {
+  //     & > * {
+  //       padding-inline-start: 16pt;
+  //     }
+  //   }
+  // }
 
   @include print {
     gap: 2pt;

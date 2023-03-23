@@ -4,11 +4,11 @@
     "name": "Denys Yaroshenko",
     "label": "Frontend Developer",
     "photo": {
-      "visible": false
+      "visible": true
     },
     "email": "denys.yaroshenko.mail@gmail.com",
-    "phone": "+380 (66) 230-61-43",
-    "summary": "Meticulous web developer with about 3 years of experience in React (Next.js). Firm believer in the mobile-first approach (except alternative requirements). I usually like to watch different tutorials, as they contain trending features and represents a different point of view. Try to keep myself up to date with web scope innovations.",
+    "phone": "(066) 230-61-43",
+    "summary": "Meticulous web developer with about 2 years of experience in React (Next.js). Firm believer in the mobile-first approach (except alternative requirements). I usually like to watch different tutorials, as they contain trending features and represents a different point of view. Try to keep myself up to date with web scope innovations.",
     "location": {
       "city": "Kyiv",
       "country": "Ukraine"
@@ -31,7 +31,22 @@
       }
     ]
   },
-  "publications": [],
+  "publications": [
+    {
+      "name": "RedFox",
+      "publisher": "Company",
+      "releaseDate": "2022-09-09",
+      "url": "http://redfoxaudit.co.uk/",
+      "summary": "A tiny social audit tool"
+    },
+    {
+      "name": "BBros",
+      "publisher": "Company",
+      "releaseDate": "2022-08-22",
+      "url": "https://bbros.io/",
+      "summary": "Simple landing page"
+    }
+  ],
   "work": [
     {
       "name": "Soft-Boost",
@@ -40,7 +55,7 @@
       "position": "Frontend Developer",
       "url": "https://soft-boost.com/",
       "startDate": "2022-06-20",
-      "endDate": "2023-03-17",
+      "endDate": "2022-10-07",
       "summary": "",
       "highlights": ["Involved in short-term web projects (Vue, Next)"]
     },
@@ -100,20 +115,13 @@
   ],
   "skills": [
     {
-      "name": "Stack",
-      "keywords": [
-        "Typescript",
-        "React",
-        "Next",
-        "NodeJS",
-        "REST",
-        "Webpack",
-        "Parcel",
-        "Bun",
-        "Docker"
-      ]
+      "name": "Primary",
+      "keywords": ["React", "Next", "Typescript", "NodeJS"]
     },
-
+    {
+      "name": "Scope",
+      "keywords": ["PHP", "Vue", "Bootstrap", "GSAP"]
+    },
     {
       "name": "Soft Skills",
       "keywords": [

@@ -2,7 +2,6 @@
 
 .container {
   @include section-offsets;
-  grid-template-rows: 2.8rem;
 }
 
 .title {
@@ -27,7 +26,7 @@
     position: absolute;
     inset: 1.5rem auto auto 0.5rem;
     width: 0.2rem;
-    height: calc(100% - 3rem);
+    height: calc(100% - 2rem);
     background-color: var(--primary, #2699c4);
   }
 

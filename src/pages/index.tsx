@@ -1,3 +1,4 @@
+import React from 'react'
 import data from '@/src/data.json'
 
 import layout from '@/src/styles/Layout.module.scss'
@@ -8,10 +9,9 @@ import Skills from '@/src/components/Skills'
 import Social from '@/src/components/Social'
 import Summary from '@/src/components/Summary'
 import Work from '@/src/components/Work'
-import { useContext } from 'react'
-import PageContext from '../context/PageContext'
+import PageContext from '@/src/context/PageContext'
 import Head from 'next/head'
-import Portfolio from '../components/Portfolio'
+import Portfolio from '@/src/components/Portfolio'
 
 function Home() {
   const _contactInfo = {
@@ -20,7 +20,7 @@ function Home() {
     location: data.basics.location,
   }
 
-  const { loading } = useContext(PageContext)
+  const { loading } = React.useContext(PageContext)
 
   return (
     <>
@@ -29,7 +29,11 @@ function Home() {
       </Head>
       <div className={layout.cv} role="main">
         <div data-index={2} className={layout.cv__left} data-loaded={!loading}>
-          <Profile person={data.basics.name} scope={data.basics.label} />
+          <Profile
+            person={data.basics.name}
+            scope={data.basics.label}
+            avatar={data.basics.photo.visible}
+          />
           <Contact info={_contactInfo} />
           <Separator data-index={3} />
           <Skills skills={data.skills} />
@@ -39,7 +43,7 @@ function Home() {
           <Summary content={data.basics.summary} />
           <Separator dark data-index={5} />
           <Portfolio projects={data.publications} />
-          <Separator dark data-index={5} />
+
           <Work work={data.work} education={data.education} />
         </div>
       </div>

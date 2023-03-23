@@ -22,6 +22,10 @@
 .text {
   display: grid;
 
+  &:first-child {
+    text-align: center;
+  }
+
   .title {
     font-size: 2.2rem;
     font-weight: 600;
@@ -31,5 +35,10 @@
   .scope {
     font-size: 1.5rem;
     text-transform: uppercase;
+  }
+
+  .title,
+  .scope {
+    letter-spacing: 0.01em;
   }
 }

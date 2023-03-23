@@ -17,7 +17,9 @@ type ListItem = {
 function clearEmailOrPhone(str: string, type: string) {
   if (!str || !type) return '#'
 
-  return type.includes('phone') ? str.replaceAll(/\W/g, '') : str.trim()
+  return type.includes('phone')
+    ? str.replaceAll(/[^a-zA-Z0-9+]/g, '')
+    : str.trim()
 }
 
 function transformToLinkItem(item: ListItem) {

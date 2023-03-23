@@ -29,17 +29,25 @@
   }
 }
 
+@mixin default-text {
+  & {
+    font-size: 1.6rem;
+  }
+}
+
 @mixin section-title {
   & {
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2.4rem;
     text-transform: uppercase;
+    margin-bottom: 0.5em;
   }
 }
 
 @mixin section-text {
   & {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 500;
   }
 }
 
@@ -47,6 +55,7 @@
   & {
     display: grid;
     gap: clamp(4px, 0.5vmax, 8px);
+    grid-template-rows: min-content;
   }
 }
 
