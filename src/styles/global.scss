@@ -2,69 +2,69 @@
 @import 'reset';
 
 @page {
-  size: A4 portrait;
-  marks: crop cross;
-  bleed: auto;
+	size: A4 portrait;
+	marks: crop cross;
+	bleed: auto;
 }
 
 :root {
-  --primary: #1b7393;
+	--primary: #1b7393;
 }
 
 html {
-  font-size: 62.5%; /* bind 1rem to 10px  */
+	font-size: 62.5%; /* bind 1rem to 10px  */
 }
 
 body {
-  * {
-    @include default-text;
-  }
+	* {
+		@include default-text;
+	}
 }
 
 ul,
 ol {
-  list-style: none;
+	list-style: none;
 }
 
 p {
-  margin: 0;
+	margin: 0;
 }
 
 a {
-  text-decoration: none;
-  color: var(--link);
-  &:hover,
-  &:focus {
-    color: var(--link-hover);
-  }
+	text-decoration: none;
+	color: var(--link);
+	&:hover,
+	&:focus {
+		color: var(--link-hover);
+	}
 }
 
 i {
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
 
-  &[data-type='phone'] {
-    background-image: url('../../public/assets/phone-alt-solid.svg');
-  }
+	&[data-type='phone'] {
+		background-image: url('../../public/assets/phone-alt-solid.svg');
+	}
 
-  &[data-type='email'] {
-    background-image: url('../../public/assets/envelope-solid.svg');
-  }
+	&[data-type='email'] {
+		background-image: url('../../public/assets/envelope-solid.svg');
+	}
 
-  &[data-type='location'] {
-    background-image: url('../../public/assets/map-marker-alt-solid.svg');
-  }
+	&[data-type='location'] {
+		background-image: url('../../public/assets/map-marker-alt-solid.svg');
+	}
 
-  &[data-type='telegram'] {
-    background-image: url('../../public/assets/telegram-plane-brands.svg');
-  }
+	&[data-type='telegram'] {
+		background-image: url('../../public/assets/telegram-plane-brands.svg');
+	}
 
-  &[data-type='github'] {
-    background-image: url('../../public/assets/github.svg');
-  }
+	&[data-type='github'] {
+		background-image: url('../../public/assets/github.svg');
+	}
 
-  &[data-type='linkedin'] {
-    background-image: url('../../public/assets/linkedin-in-brands.svg');
-  }
+	&[data-type='linkedin'] {
+		background-image: url('../../public/assets/linkedin-in-brands.svg');
+	}
 }

@@ -1,78 +1,78 @@
 $screens: (
-  's': 576px,
-  'm': 768px,
-  'md': 990px,
-  'l': 1200px,
-  'xl': 1680px,
-  'xxl': 1960px,
+	's': 576px,
+	'm': 768px,
+	'md': 990px,
+	'l': 1200px,
+	'xl': 1680px,
+	'xxl': 1960px,
 );
 
 @mixin print {
-  @media only print {
-    @content;
-  }
+	@media only print {
+		@content;
+	}
 }
 
 @mixin screen {
-  @media only screen {
-    @content;
-  }
+	@media only screen {
+		@content;
+	}
 }
 
 @mixin screen-s {
-  @media (min-width: map-get($screens, 's')) {
-    @content;
-  }
+	@media (min-width: map-get($screens, 's')) {
+		@content;
+	}
 }
 
 @mixin screen-m {
-  @media (min-width: map-get($screens, 'm')) {
-    @content;
-  }
+	@media (min-width: map-get($screens, 'm')) {
+		@content;
+	}
 }
 
 @mixin screen-md {
-  @media (min-width: map-get($screens, 'md')) {
-    @content;
-  }
+	@media (min-width: map-get($screens, 'md')) {
+		@content;
+	}
 }
 
 @mixin screen-l {
-  @media (min-width: map-get($screens, 'l')) {
-    @content;
-  }
+	@media (min-width: map-get($screens, 'l')) {
+		@content;
+	}
 }
 
 @mixin screen-xl {
-  @media (min-width: map-get($screens, 'xl')) {
-    @content;
-  }
+	@media (min-width: map-get($screens, 'xl')) {
+		@content;
+	}
 }
 
 @mixin if-title {
-  h1,
-  h2,
-  h3,
-  h4 {
-    @content;
-  }
+	h1,
+	h2,
+	h3,
+	h4 {
+		@content;
+	}
 }
 
 @mixin clip-path-polygon($size) {
-  clip-path: polygon(
-    $size 0%,
-    calc(100% - $size) 0%,
-    100% $size,
-    100% calc(100% - $size),
-    calc(100% - $size) 100%,
-    $size 100%,
-    0% calc(100% - $size),
-    0% $size
-  );
+	clip-path: polygon(
+		$size 0%,
+		calc(100% - $size) 0%,
+		100% $size,
+		100% calc(100% - $size),
+		calc(100% - $size) 100%,
+		$size 100%,
+		0% calc(100% - $size),
+		0% $size
+	);
 }
 
 @mixin bg-image($path) {
-  & {
-    background-image: url($path);
-  }
+	& {
+		background-image: url($path);
+	}
 }

@@ -1,159 +1,147 @@
 {
-  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
-  "basics": {
-    "name": "Denys Yaroshenko",
-    "label": "Frontend Developer",
-    "photo": {
-      "visible": true
-    },
-    "email": "denys.yaroshenko.mail@gmail.com",
-    "phone": "(066) 230-61-43",
-    "summary": "Meticulous web developer with about 2 years of experience in React (Next.js). Firm believer in the mobile-first approach (except alternative requirements). I usually like to watch different tutorials, as they contain trending features and represents a different point of view. Try to keep myself up to date with web scope innovations.",
-    "location": {
-      "city": "Kyiv",
-      "country": "Ukraine"
-    },
-    "profiles": [
-      {
-        "network": "Telegram",
-        "username": "@perhamik",
-        "url": "https://t.me/perhamik"
-      },
-      {
-        "network": "Github",
-        "username": "@perhamik",
-        "url": "https://github.com/perhamik"
-      },
-      {
-        "network": "LinkedIn",
-        "username": "@denys-yaroshenko",
-        "url": "https://www.linkedin.com/in/denys-yaroshenko-84993b1a1/"
-      }
-    ]
-  },
-  "publications": [
-    {
-      "name": "RedFox",
-      "publisher": "Company",
-      "releaseDate": "2022-09-09",
-      "url": "http://redfoxaudit.co.uk/",
-      "summary": "A tiny social audit tool"
-    },
-    {
-      "name": "BBros",
-      "publisher": "Company",
-      "releaseDate": "2022-08-22",
-      "url": "https://bbros.io/",
-      "summary": "Simple landing page"
-    }
-  ],
-  "work": [
-    {
-      "name": "Soft-Boost",
-      "location": "Kharkiv, Ukraine",
-      "description": "Full-Cycle Web Development Company",
-      "position": "Frontend Developer",
-      "url": "https://soft-boost.com/",
-      "startDate": "2022-06-20",
-      "endDate": "2022-10-07",
-      "summary": "",
-      "highlights": ["Involved in short-term web projects (Vue, Next)"]
-    },
-    {
-      "name": "Sevn Studio",
-      "location": "Kyiv, Ukraine",
-      "description": "Full-Cycle Web Development Company",
-      "position": "Frontend Developer",
-      "url": "https://sevn.pro/",
-      "startDate": "2020-12-15",
-      "endDate": "2022-06-04",
-      "summary": "",
-      "highlights": [
-        "Implemented websites from concept through deployment (React/Next)",
-        "Assessed UX and UI designs for technical feasibility",
-        "Maintenance assigned projects"
-      ]
-    },
-    {
-      "name": "New Life",
-      "location": "Kyiv, Ukraine",
-      "description": "Online Store",
-      "position": "Full Stack Web Developer",
-      "url": "https://newlife-baby.com/",
-      "startDate": "2019-12-04",
-      "endDate": "2020-10-15",
-      "summary": "",
-      "highlights": [
-        "Website maintenance",
-        "Content administration",
-        "Troubleshooting software and hardware issues"
-      ]
-    },
-    {
-      "name": "LLC SKYPARK",
-      "location": "Kyiv, Ukraine",
-      "description": "Rope parks/zip-lines",
-      "position": "Frontend Developer",
-      "url": "https://skypark.com.ua/en/",
-      "startDate": "2018-11-05",
-      "endDate": "2019-12-27",
-      "summary": "",
-      "highlights": ["Editing Wordpress templates", "Website maintenance"]
-    }
-  ],
-  "education": [
-    {
-      "institution": "Borys Grinchenko Kyiv University",
-      "url": "https://kubg.edu.ua/",
-      "area": "Information Technology (Computer science)",
-      "studyType": "Bachelor",
-      "startDate": "2015-09-01",
-      "endDate": "2019-07-20",
-      "score": "4.0",
-      "courses": ["Cisco IT Essentials 5.0, Cisco Linux Essentials"]
-    }
-  ],
-  "skills": [
-    {
-      "name": "Primary",
-      "keywords": ["React", "Next", "Typescript", "NodeJS"]
-    },
-    {
-      "name": "Scope",
-      "keywords": ["PHP", "Vue", "Bootstrap", "GSAP"]
-    },
-    {
-      "name": "Soft Skills",
-      "keywords": [
-        "Proactive",
-        "Dependable",
-        "Initiative",
-        "Versatile",
-        "Problem-Solving",
-        "Non-Conflict",
-        "Adaptable"
-      ]
-    }
-  ],
-  "languages": [
-    {
-      "language": "English",
-      "fluency": "Intermediate"
-    },
-    {
-      "language": "Russian",
-      "fluency": "Native"
-    },
-    {
-      "language": "Ukrainian",
-      "fluency": "Native"
-    }
-  ],
-  "interests": [
-    {
-      "name": "Wildlife",
-      "keywords": ["Ferrets", "Unicorns"]
-    }
-  ],
-  "projects": []
+	"$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+	"basics": {
+		"name": "Denys Yaroshenko",
+		"label": "Frontend Developer",
+		"photo": {
+			"visible": true
+		},
+		"email": "denys.yaroshenko.mail@gmail.com",
+		"phone": "(066) 230-61-43",
+		"summary": "Meticulous web developer with about 2 years of experience in React (Next.js). Firm believer in the mobile-first approach (except alternative requirements). I usually like to watch different tutorials, as they contain trending features and represents a different point of view. Try to keep myself up to date with web scope innovations.",
+		"location": {
+			"city": "Kyiv",
+			"country": "Ukraine"
+		},
+		"profiles": [
+			{
+				"network": "Telegram",
+				"username": "@perhamik",
+				"url": "https://t.me/perhamik"
+			},
+			{
+				"network": "Github",
+				"username": "@perhamik",
+				"url": "https://github.com/perhamik"
+			},
+			{
+				"network": "LinkedIn",
+				"username": "@denys-yaroshenko",
+				"url": "https://www.linkedin.com/in/denys-yaroshenko-84993b1a1/"
+			}
+		]
+	},
+	"publications": [
+		{
+			"name": "RedFox",
+			"publisher": "Company",
+			"releaseDate": "2022-09-09",
+			"url": "http://redfoxaudit.co.uk/",
+			"summary": "A tiny social audit tool"
+		},
+		{
+			"name": "BBros",
+			"publisher": "Company",
+			"releaseDate": "2022-08-22",
+			"url": "https://bbros.io/",
+			"summary": "Simple landing page"
+		}
+	],
+	"work": [
+		{
+			"name": "Soft-Boost",
+			"location": "Kharkiv, Ukraine",
+			"description": "Full-Cycle Web Development Company",
+			"position": "Frontend Developer",
+			"url": "https://soft-boost.com/",
+			"startDate": "2022-06-20",
+			"endDate": "2022-10-07",
+			"summary": "",
+			"highlights": ["Involved in short-term web projects (Vue, Next)"]
+		},
+		{
+			"name": "Sevn Studio",
+			"location": "Kyiv, Ukraine",
+			"description": "Full-Cycle Web Development Company",
+			"position": "Frontend Developer",
+			"url": "https://sevn.pro/",
+			"startDate": "2020-12-15",
+			"endDate": "2022-06-04",
+			"summary": "",
+			"highlights": [
+				"Implemented websites from concept through deployment (React/Next)",
+				"Assessed UX and UI designs for technical feasibility",
+				"Maintenance assigned projects"
+			]
+		},
+		{
+			"name": "New Life",
+			"location": "Kyiv, Ukraine",
+			"description": "Online Store",
+			"position": "Full Stack Web Developer",
+			"url": "https://newlife-baby.com/",
+			"startDate": "2019-12-04",
+			"endDate": "2020-10-15",
+			"summary": "",
+			"highlights": ["Website maintenance", "Content administration", "Troubleshooting software and hardware issues"]
+		},
+		{
+			"name": "LLC SKYPARK",
+			"location": "Kyiv, Ukraine",
+			"description": "Rope parks/zip-lines",
+			"position": "Frontend Developer",
+			"url": "https://skypark.com.ua/en/",
+			"startDate": "2018-11-05",
+			"endDate": "2019-12-27",
+			"summary": "",
+			"highlights": ["Editing Wordpress templates", "Website maintenance"]
+		}
+	],
+	"education": [
+		{
+			"institution": "Borys Grinchenko Kyiv University",
+			"url": "https://kubg.edu.ua/",
+			"area": "Information Technology (Computer science)",
+			"studyType": "Bachelor",
+			"startDate": "2015-09-01",
+			"endDate": "2019-07-20",
+			"score": "4.0",
+			"courses": ["Cisco IT Essentials 5.0, Cisco Linux Essentials"]
+		}
+	],
+	"skills": [
+		{
+			"name": "Primary",
+			"keywords": ["React", "Next", "Typescript", "NodeJS"]
+		},
+		{
+			"name": "Scope",
+			"keywords": ["PHP", "Vue", "Bootstrap", "GSAP"]
+		},
+		{
+			"name": "Soft Skills",
+			"keywords": ["Proactive", "Dependable", "Initiative", "Versatile", "Problem-Solving", "Non-Conflict", "Adaptable"]
+		}
+	],
+	"languages": [
+		{
+			"language": "English",
+			"fluency": "Intermediate"
+		},
+		{
+			"language": "Russian",
+			"fluency": "Native"
+		},
+		{
+			"language": "Ukrainian",
+			"fluency": "Native"
+		}
+	],
+	"interests": [
+		{
+			"name": "Wildlife",
+			"keywords": ["Ferrets", "Unicorns"]
+		}
+	],
+	"projects": []
 }

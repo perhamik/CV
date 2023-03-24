@@ -1,42 +1,42 @@
 @use '../../styles/helpers' as *;
 
 .social {
-  @include section-offsets;
+	@include section-offsets;
 
-  &__title {
-    @include section-title;
-    margin-bottom: 1rem;
-  }
+	&__title {
+		@include section-title;
+		margin-bottom: 1rem;
+	}
 
-  &__list {
-    display: flex;
+	&__list {
+		display: flex;
 
-    @include screen {
-      align-items: center;
-      gap: 1.5rem;
-    }
+		@include screen {
+			align-items: center;
+			gap: 1.5rem;
+		}
 
-    @include print {
-      flex-direction: column;
-      gap: 1rem;
-    }
-  }
+		@include print {
+			flex-direction: column;
+			gap: 1rem;
+		}
+	}
 
-  &__item {
-    @include section-icon-button;
+	&__item {
+		@include section-icon-button;
 
-    @include print {
-      position: relative;
+		@include print {
+			position: relative;
 
-      &::after {
-        content: attr(href);
-        display: block;
-        position: absolute;
-        font-size: 1.4rem;
-        line-height: 1.1;
-        inset: auto auto auto 100%;
-        margin-left: 1rem;
-      }
-    }
-  }
+			&::after {
+				content: attr(href);
+				display: block;
+				position: absolute;
+				font-size: 1.4rem;
+				line-height: 1.1;
+				inset: auto auto auto 100%;
+				margin-left: 1rem;
+			}
+		}
+	}
 }

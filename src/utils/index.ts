@@ -1,2 +1,2 @@
-export { throttle } from './debounce'
-export { setVH } from './windowProps'
+export {throttle} from './debounce'
+export {setVH} from './windowProps'

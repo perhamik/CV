@@ -1,89 +1,89 @@
 @use '../../styles/helpers' as *;
 
 .container {
-  @include section-offsets;
+	@include section-offsets;
 }
 
 .title {
-  @include section-title;
+	@include section-title;
 }
 
 .text {
-  @include section-text;
+	@include section-text;
 }
 
 .list {
-  @include section-offsets;
-  position: relative;
-  display: grid;
-  align-items: center;
-  max-width: 640px;
-  padding-left: 2.6rem;
+	@include section-offsets;
+	position: relative;
+	display: grid;
+	align-items: center;
+	max-width: 640px;
+	padding-left: 2.6rem;
 
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    inset: 1.5rem auto auto 0.5rem;
-    width: 0.2rem;
-    height: calc(100% - 2rem);
-    background-color: var(--primary, #2699c4);
-  }
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		inset: 1.5rem auto auto 0.5rem;
+		width: 0.2rem;
+		height: calc(100% - 2rem);
+		background-color: var(--primary, #2699c4);
+	}
 
-  .item {
-    &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      inset: 0.6rem auto auto -2.6rem;
-      width: 1.2rem;
-      height: 1.2rem;
-      border-radius: 50%;
-      border: 0.2rem solid var(--primary, #2699c4);
-      z-index: 1;
-      background-color: #fff;
-    }
-  }
+	.item {
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			inset: 0.6rem auto auto -2.6rem;
+			width: 1.2rem;
+			height: 1.2rem;
+			border-radius: 50%;
+			border: 0.2rem solid var(--primary, #2699c4);
+			z-index: 1;
+			background-color: #fff;
+		}
+	}
 }
 
 .item {
-  @include transition-long;
+	@include transition-long;
 
-  position: relative;
-  font-size: 1.5rem;
-  height: 100%;
+	position: relative;
+	font-size: 1.5rem;
+	height: 100%;
 
-  &__date {
-    font-weight: 700;
-    color: #555;
-  }
+	&__date {
+		font-weight: 700;
+		color: #555;
+	}
 
-  &__info {
-    max-width: 540px;
-  }
+	&__info {
+		max-width: 540px;
+	}
 
-  &[data-loaded='false'] {
-    opacity: 0.05;
-    transform: translateY(25%);
-  }
+	&[data-loaded='false'] {
+		opacity: 0.05;
+		transform: translateY(25%);
+	}
 }
 
 .position {
-  color: #757575;
-  font-weight: 600;
+	color: #757575;
+	font-weight: 600;
 }
 
 .highlights {
-  display: grid;
-  gap: 2px;
+	display: grid;
+	gap: 2px;
 
-  &__item {
-    color: #333;
-  }
+	&__item {
+		color: #333;
+	}
 }
 
 .link {
-  display: block;
-  margin-top: 0.5rem;
-  font-weight: 500;
+	display: block;
+	margin-top: 0.5rem;
+	font-weight: 500;
 }

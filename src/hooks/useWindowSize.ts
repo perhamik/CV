@@ -1,14 +1,16 @@
-import { useEffect } from 'react'
-import { throttle } from '../utils/debounce'
+import React from 'react'
+import {throttle} from '../utils/debounce'
 
-export function useWindowSize(func = () => {}) {
-  const handleResize = throttle(func, 80)
-  useEffect(() => {
-    // Add event listener
-    window.addEventListener('resize', handleResize, { passive: true })
+const _cb = () => console.log('default callback')
 
-    handleResize()
-    // Remove event listener on cleanup
-    return () => window.removeEventListener('resize', handleResize)
-  }) // Empty array ensures that effect is only run on mount
+export function useWindowSize(func = _cb) {
+	const handleResize = throttle(func, 80)
+	React.useEffect(() => {
+		// Add event listener
+		window.addEventListener('resize', handleResize, {passive: true})
+
+		handleResize()
+		// Remove event listener on cleanup
+		return () => window.removeEventListener('resize', handleResize)
+	}) // Empty array ensures that effect is only run on mount
 }

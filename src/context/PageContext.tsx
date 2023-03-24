@@ -1,41 +1,42 @@
-import {
-  Context,
-  createContext,
-  Dispatch,
-  SetStateAction,
-  useEffect,
-  useState,
-} from 'react'
+import React from 'react'
 
 export type ContextType = {
-  loading: boolean
-  separatorCounter: number
-  setSeparatorCount?: Dispatch<SetStateAction<number>>
+	loading: boolean
+	separatorCounter: number
+	setSeparatorCount?: React.Dispatch<React.SetStateAction<number>>
 }
 
-const PageContext: Context<ContextType> = createContext({
-  loading: true,
-  separatorCounter: 0,
-})
+const PageContext: React.Context<ContextType> = React.createContext({} as ContextType)
 export default PageContext
 
-export const PageProvider = ({ children }) => {
-  const [loading, setLoading] = useState(true)
-  const [separatorCounter, setSeparatorCount] = useState(0)
+export const PageProvider = ({children}: {children: any}) => {
+	const [loading, setLoading] = React.useState(true)
+	const [separatorCounter, setSeparatorCount] = React.useState(0)
+	let _loadTimeout: null | NodeJS.Timeout = null
 
-  const contextData: ContextType = {
-    loading: loading,
-    separatorCounter: separatorCounter,
-    setSeparatorCount: setSeparatorCount,
-  }
+	const contextData = React.useMemo(
+		() => ({
+			loading: loading,
+			separatorCounter: separatorCounter,
+			setSeparatorCount: setSeparatorCount,
+		}),
+		[loading, separatorCounter, setSeparatorCount],
+	)
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false)
-    }, 150)
-  }, [])
+	React.useEffect(() => {
+		if (_loadTimeout) return
 
-  return (
-    <PageContext.Provider value={contextData}>{children}</PageContext.Provider>
-  )
+		_loadTimeout = setTimeout(() => {
+			setLoading(false)
+		}, 150)
+
+		return () => {
+			if (_loadTimeout) {
+				clearTimeout(_loadTimeout)
+				_loadTimeout = null
+			}
+		}
+	}, [])
+
+	return <PageContext.Provider value={contextData}>{children}</PageContext.Provider>
 }

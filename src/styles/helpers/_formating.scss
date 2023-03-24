@@ -1,145 +1,145 @@
 @use './mixins' as *;
 
 @mixin transition {
-  @include screen {
-    & {
-      transition: all 220ms linear 40ms;
-    }
-  }
+	@include screen {
+		& {
+			transition: all 220ms linear 40ms;
+		}
+	}
 }
 
 @mixin transition-long {
-  $delay: 220ms;
+	$delay: 220ms;
 
-  @include screen {
-    & {
-      transition: all 640ms ease-in $delay;
-      @for $i from 0 through 12 {
-        &[data-index='#{$i}'] {
-          transition-delay: #{$delay * $i};
-        }
-      }
-    }
-  }
+	@include screen {
+		& {
+			transition: all 640ms ease-in $delay;
+			@for $i from 0 through 12 {
+				&[data-index='#{$i}'] {
+					transition-delay: #{$delay * $i};
+				}
+			}
+		}
+	}
 }
 
 @mixin hover {
-  &:hover {
-    @content;
-  }
+	&:hover {
+		@content;
+	}
 }
 
 @mixin default-text {
-  & {
-    font-size: 1.6rem;
-  }
+	& {
+		font-size: 1.6rem;
+	}
 }
 
 @mixin section-title {
-  & {
-    font-weight: 600;
-    font-size: 2.4rem;
-    text-transform: uppercase;
-    margin-bottom: 0.5em;
-  }
+	& {
+		font-weight: 600;
+		font-size: 2.4rem;
+		text-transform: uppercase;
+		margin-bottom: 0.5em;
+	}
 }
 
 @mixin section-text {
-  & {
-    font-size: 1.6rem;
-    font-weight: 500;
-  }
+	& {
+		font-size: 1.6rem;
+		font-weight: 500;
+	}
 }
 
 @mixin section-offsets {
-  & {
-    display: grid;
-    gap: clamp(4px, 0.5vmax, 8px);
-    grid-template-rows: min-content;
-  }
+	& {
+		display: grid;
+		gap: clamp(4px, 0.5vmax, 8px);
+		grid-template-rows: min-content;
+	}
 }
 
 @mixin section-icon-button {
-  & {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+	& {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 
-    border-radius: 50%;
+		border-radius: 50%;
 
-    @include screen {
-      border: 1px solid #fff;
-      background-color: rgba(244, 148, 11, 0);
-    }
+		@include screen {
+			border: 1px solid #fff;
+			background-color: rgba(244, 148, 11, 0);
+		}
 
-    @include print {
-      border: 1px solid var(--primary, #2699c4);
-      background-color: #fff;
+		@include print {
+			border: 1px solid var(--primary, #2699c4);
+			background-color: #fff;
 
-      width: 28px;
-      height: 28px;
+			width: 28px;
+			height: 28px;
 
-      &__icon {
-        width: 16px;
-        height: 16px;
+			&__icon {
+				width: 16px;
+				height: 16px;
 
-        filter: invert(1);
-      }
-    }
+				filter: invert(1);
+			}
+		}
 
-    @include screen {
-      min-width: 40px;
-      min-height: 40px;
-      width: 40px;
-      height: 40px;
+		@include screen {
+			min-width: 40px;
+			min-height: 40px;
+			width: 40px;
+			height: 40px;
 
-      &__icon {
-        min-width: 20px;
-        min-height: 20px;
-        width: 20px;
-        height: 20px;
-      }
-    }
+			&__icon {
+				min-width: 20px;
+				min-height: 20px;
+				width: 20px;
+				height: 20px;
+			}
+		}
 
-    &__icon {
-      @include screen {
-        animation: {
-          name: bounce;
-          duration: 1.2s;
-          timing-function: ease;
-          iteration-count: infinite;
-          play-state: paused;
-        }
+		&__icon {
+			@include screen {
+				animation: {
+					name: bounce;
+					duration: 1.2s;
+					timing-function: ease;
+					iteration-count: infinite;
+					play-state: paused;
+				}
 
-        @include hover {
-          animation-play-state: running;
-        }
-      }
-    }
+				@include hover {
+					animation-play-state: running;
+				}
+			}
+		}
 
-    &,
-    &__icon {
-      @include transition;
-    }
-  }
+		&,
+		&__icon {
+			@include transition;
+		}
+	}
 }
 
 @keyframes bounce {
-  30% {
-    transform: scale(1.1);
-  }
-  40%,
-  60% {
-    transform: rotate(-8deg) scale(1.1);
-  }
-  50% {
-    transform: rotate(8deg) scale(1.1);
-  }
-  70% {
-    transform: rotate(0deg) scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+	30% {
+		transform: scale(1.1);
+	}
+	40%,
+	60% {
+		transform: rotate(-8deg) scale(1.1);
+	}
+	50% {
+		transform: rotate(8deg) scale(1.1);
+	}
+	70% {
+		transform: rotate(0deg) scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
 }

@@ -1,0 +1,26 @@
+{
+	"env": {
+		"node": true,
+		"browser": true,
+		"es2021": true
+	},
+	"globals": {
+		"proccess": true
+	},
+	"settings": {
+		"next": {
+			"rootDir": "./"
+		}
+	},
+	"root": true,
+	"extends": ["plugin:@next/next/recommended", "eslint:recommended", "prettier"],
+	"plugins": ["@next/eslint-plugin-next"],
+	"parserOptions": {
+		"project": "./tsconfig.eslint.json"
+	},
+	"rules": {
+		"eqeqeq": "warn",
+		"strict": "off",
+		"no-set-state": "off"
+	}
+}
