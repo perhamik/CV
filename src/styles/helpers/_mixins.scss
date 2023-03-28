@@ -7,6 +7,16 @@ $screens: (
 	'xxl': 1960px,
 );
 
+$displayMode: 'print';
+
+@function getDisplayMode() {
+	@return $displayMode;
+}
+
+@function isPrint() {
+	@return getDisplayMode() == 'print';
+}
+
 @mixin print {
 	@media only print {
 		@content;

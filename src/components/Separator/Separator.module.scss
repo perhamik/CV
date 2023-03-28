@@ -2,22 +2,23 @@
 
 .line {
 	width: 100%;
-	height: 0.25rem;
+	height: 0.2rem;
 	transform-origin: left;
 
 	&:not([data-theme]),
 	&[data-theme='light'] {
 		background-color: #fff;
 
-		@include print {
-			background-color: var(--primary, #2699c4);
-			height: 0.2rem;
+		@if not isPrint() {
+			@include print {
+				background-color: var(--primary, #2699c4);
+				height: 0.2rem;
+			}
 		}
 	}
 
 	&[data-theme='dark'] {
 		background-color: var(--primary, #2699c4);
-		height: 0.2rem;
 	}
 
 	@include transition-long;

@@ -1,31 +1,33 @@
 @use 'helpers' as *;
 
+@function kek() {
+}
+
 .cv {
 	display: grid;
 	grid-template-columns: minmax(auto, 470px) minmax(480px, 700px);
 	justify-content: center;
 
-	@include screen {
+	@if isPrint() {
 		min-height: calc(var(--vh, 1vh) * 100);
 		background-color: #585c68;
+	} @else {
+		@include screen {
+			min-height: calc(var(--vh, 1vh) * 100);
+			background-color: #585c68;
+		}
 	}
 
-	// @media only print {
-	//   height: 310mm;
-
-	//   &__left {
-	//     & > * {
-	//       padding-inline-start: 16pt;
-	//     }
-	//   }
-	// }
+	@media only print {
+		height: 307.5mm;
+	}
 
 	@include print {
 		gap: 2pt;
 
 		* {
-			print-color-adjust: exact !important;
-			-webkit-print-color-adjust: exact !important;
+			print-color-adjust: exact;
+			-webkit-print-color-adjust: exact;
 		}
 	}
 
@@ -34,10 +36,15 @@
 		display: grid;
 		gap: clamp(8px, 1vmax, 16px);
 		padding: clamp(24px, 3vmax, 48px);
+		align-content: start;
 		@include transition-long;
 
 		&[data-loaded='false'] {
 			opacity: 0;
+		}
+
+		@include print {
+			gap: 20pt;
 		}
 	}
 
@@ -48,25 +55,34 @@
 			margin-bottom: 1rem;
 		}
 
-		@include screen {
+		@if isPrint() {
 			background-color: var(--primary, #2699c4);
 			color: #d6f4ff;
-
-			&[data-loaded='false'] {
-				transform: translateX(-10%);
-			}
 
 			@include if-title {
 				color: #fff;
 			}
-		}
+		} @else {
+			@include screen {
+				background-color: var(--primary, #2699c4);
+				color: #d6f4ff;
 
-		@include print {
-			background-color: #fff;
-			color: #0a0a0a;
+				&[data-loaded='false'] {
+					transform: translateX(-10%);
+				}
 
-			@include if-title {
-				color: var(--primary, #2699c4);
+				@include if-title {
+					color: #fff;
+				}
+			}
+
+			@include print {
+				background-color: #fff;
+				color: #0a0a0a;
+
+				@include if-title {
+					color: var(--primary, #2699c4);
+				}
 			}
 		}
 	}
@@ -77,6 +93,10 @@
 
 		@include if-title {
 			color: var(--primary, #2699c4);
+		}
+
+		@include print {
+			gap: 15pt;
 		}
 	}
 }

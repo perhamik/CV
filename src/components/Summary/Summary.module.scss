@@ -16,7 +16,12 @@
 }
 
 .text {
-	@include section-text;
 	@include transition-long;
+	font-weight: 400;
 	max-width: 640px;
+
+	@include screen {
+		letter-spacing: 0.02em;
+		font-size: 1.64rem;
+	}
 }

@@ -32,6 +32,13 @@
 @mixin default-text {
 	& {
 		font-size: 1.6rem;
+		letter-spacing: 0.01em;
+		word-spacing: 0.12em;
+
+		@media only print {
+			word-spacing: normal;
+			letter-spacing: normal;
+		}
 	}
 }
 
@@ -41,21 +48,36 @@
 		font-size: 2.4rem;
 		text-transform: uppercase;
 		margin-bottom: 0.5em;
+
+		@media only print {
+			font-size: 2.2rem;
+		}
 	}
 }
 
 @mixin section-text {
 	& {
-		font-size: 1.6rem;
+		font-size: 1.8rem;
 		font-weight: 500;
+		letter-spacing: 0.04em;
+
+		@media only print {
+			font-size: 1.6rem;
+			font-weight: 400;
+			letter-spacing: normal;
+		}
 	}
 }
 
 @mixin section-offsets {
 	& {
 		display: grid;
-		gap: clamp(4px, 0.5vmax, 8px);
 		grid-template-rows: min-content;
+		gap: clamp(4px, 0.5vmax, 8px);
+
+		@media only print {
+			gap: 1pt;
+		}
 	}
 }
 
@@ -68,38 +90,41 @@
 
 		border-radius: 50%;
 
-		@include screen {
+		@if isPrint() {
 			border: 1px solid #fff;
 			background-color: rgba(244, 148, 11, 0);
-		}
+		} @else {
+			@include screen {
+				border: 1px solid #fff;
+				background-color: rgba(244, 148, 11, 0);
+			}
 
-		@include print {
-			border: 1px solid var(--primary, #2699c4);
-			background-color: #fff;
+			@include print {
+				border: 1px solid var(--primary, #2699c4);
+				background-color: #fff;
 
-			width: 28px;
-			height: 28px;
+				width: 28px;
+				height: 28px;
 
-			&__icon {
-				width: 16px;
-				height: 16px;
+				&__icon {
+					width: 16px;
+					height: 16px;
 
-				filter: invert(1);
+					filter: invert(1);
+				}
 			}
 		}
 
-		@include screen {
-			min-width: 40px;
-			min-height: 40px;
-			width: 40px;
-			height: 40px;
+		min-width: 40px;
+		min-height: 40px;
+		width: 40px;
+		height: 40px;
 
-			&__icon {
-				min-width: 20px;
-				min-height: 20px;
-				width: 20px;
-				height: 20px;
-			}
+		&__icon {
+			min-width: 20px;
+			min-height: 20px;
+			width: 20px;
+			height: 20px;
 		}
 
 		&__icon {

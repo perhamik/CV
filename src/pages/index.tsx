@@ -28,7 +28,7 @@ function Home() {
 			<Head>
 				<title>CV-Denys-Yaroshenko</title>
 			</Head>
-			<div className={layout.cv} role="main">
+			<main className={layout.cv} role="main">
 				<div data-index={2} className={layout.cv__left} data-loaded={!loading}>
 					<Profile person={data.basics.name} scope={data.basics.label} avatar={data.basics.photo.visible} />
 					<Contact info={_contactInfo} />
@@ -43,7 +43,7 @@ function Home() {
 
 					<Work work={data.work} education={data.education} />
 				</div>
-			</div>
+			</main>
 		</>
 	)
 }
