@@ -75,12 +75,12 @@
 		{
 			"institution": "Genesis",
 			"url": "https://www.academy.gen.tech/front-end-school",
-			"area": "Front-End School | Genesis Academy",
+			"area": "Front-End",
 			"studyType": "",
 			"startDate": "2023-04-07",
 			"endDate": "",
 			"score": "",
-			"courses": ["Cisco IT Essentials 5.0, Cisco Linux Essentials"]
+			"courses": ["Front-End School | Genesis Academy"]
 		},
 		{
 			"institution": "Borys Grinchenko Kyiv University",
