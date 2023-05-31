@@ -4,7 +4,7 @@
 		"name": "Denys Yaroshenko",
 		"label": "Frontend Developer",
 		"photo": {
-			"visible": false
+			"visible": true
 		},
 		"email": "denys.yaroshenko.mail@gmail.com",
 		"phone": "+380 (66) 230-61-43",
@@ -69,20 +69,19 @@
 			"endDate": "2020-10-15",
 			"summary": "",
 			"highlights": ["Website maintenance", "Content administration", "Troubleshooting software and hardware issues"]
-		},
-		{
-			"name": "LLC SKYPARK",
-			"location": "Kyiv, Ukraine",
-			"description": "Rope parks/zip-lines",
-			"position": "Frontend Developer",
-			"url": "https://skypark.com.ua/en/",
-			"startDate": "2018-11-05",
-			"endDate": "2019-12-27",
-			"summary": "",
-			"highlights": ["Editing Wordpress templates", "Website maintenance"]
 		}
 	],
 	"education": [
+		{
+			"institution": "Genesis",
+			"url": "https://www.academy.gen.tech/front-end-school",
+			"area": "Front-End School | Genesis Academy",
+			"studyType": "",
+			"startDate": "2023-04-07",
+			"endDate": "",
+			"score": "",
+			"courses": ["Cisco IT Essentials 5.0, Cisco Linux Essentials"]
+		},
 		{
 			"institution": "Borys Grinchenko Kyiv University",
 			"url": "https://kubg.edu.ua/",
@@ -97,12 +96,12 @@
 	"skills": [
 		{
 			"name": "Stack",
-			"keywords": ["Typescript", "React", "Next", "NodeJS", "REST", "Webpack", "Parcel", "Bun", "Docker"]
+			"keywords": ["Typescript", "Next/React", "NodeJS", "REST"]
 		},
 
 		{
 			"name": "Soft Skills",
-			"keywords": ["Proactive", "Dependable", "Initiative", "Versatile", "Problem-Solving", "Non-Conflict", "Adaptable"]
+			"keywords": ["Proactive", "Dependable", "Versatile", "Problem-Solving", "Non-Conflict", "Adaptable"]
 		}
 	],
 	"languages": [

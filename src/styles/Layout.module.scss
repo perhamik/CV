@@ -1,15 +1,12 @@
 @use 'helpers' as *;
 
-@function kek() {
-}
-
 .cv {
 	display: grid;
 	grid-template-columns: minmax(auto, 470px) minmax(480px, 700px);
 	justify-content: center;
 
 	@if isPrint() {
-		min-height: calc(var(--vh, 1vh) * 100);
+		//min-height: calc(var(--vh, 1vh) * 95);
 		background-color: #585c68;
 	} @else {
 		@include screen {
@@ -19,7 +16,10 @@
 	}
 
 	@media only print {
-		height: 307.5mm;
+		& > .cv__left,
+		& > .cv__right {
+			height: 307.5mm;
+		}
 	}
 
 	@include print {
@@ -44,7 +44,7 @@
 		}
 
 		@include print {
-			gap: 20pt;
+			gap: 18pt;
 		}
 	}
 
