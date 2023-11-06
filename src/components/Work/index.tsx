@@ -71,22 +71,20 @@ function ExperienceItem({item, index}: {item: WorkExperience; index: number}) {
 
 	return (
 		<li className={style.item} data-index={index} data-loaded={!loading}>
+			<a href={item.url} target="_blank" className={style.link}>
+				{item.name}
+			</a>
 			<span className={style.item__date}>{date}</span>
-			<div className={style.item__info}>
-				<h5 className={style.position}>{item.position}</h5>
-				<ul className={style.highlights}>
-					{item.highlights.map((highlight, _id) => {
-						return (
-							<li key={_id} className={style.highlights__item}>
-								{highlight}
-							</li>
-						)
-					})}
-				</ul>
-				<a href={item.url} target="_blank" className={style.link}>
-					{item.name}
-				</a>
-			</div>
+			<h5 className={style.position}>{item.position}</h5>
+			<ul className={style.highlights}>
+				{item.highlights.map((highlight, _id) => {
+					return (
+						<li key={_id} className={style.highlights__item}>
+							{highlight}
+						</li>
+					)
+				})}
+			</ul>
 		</li>
 	)
 }

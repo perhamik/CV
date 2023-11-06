@@ -66,6 +66,14 @@
 		opacity: 0.05;
 		transform: translateY(25%);
 	}
+
+	& > *:not(:first-child) {
+		margin-left: 1rem;
+	}
+
+	.position {
+		margin-left: 0.1rem;
+	}
 }
 
 .position {
@@ -84,6 +92,7 @@
 
 .link {
 	display: block;
-	margin-top: 0.5rem;
-	font-weight: 500;
+	font-weight: 700;
+	font-size: 1.8rem;
+	line-height: 1.35;
 }
